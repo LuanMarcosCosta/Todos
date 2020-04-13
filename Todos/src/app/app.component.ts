@@ -8,6 +8,7 @@ import { Todo } from 'src/models/todos.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public mode: string = 'list';
   public todos: Todo[] = [];
   public title: String = 'Minhas Tarefas';
   public form: FormGroup;
@@ -69,6 +70,10 @@ export class AppComponent {
     } else {
       this.todos = [];
     }
+  }
+
+  changeMode(mode: string){ //para mostrar a opção de registrar ou cancelar o registro!
+    this.mode = mode;
   }
 
 }
