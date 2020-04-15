@@ -61,6 +61,7 @@ export class AppComponent {
   save() {
     const data = JSON.stringify(this.todos); //convertendo um JASON em uma string
     localStorage.setItem('todos', data);
+    this.mode='list';
   }
 
   load() {
