@@ -17,18 +17,18 @@
             Este campo deve conter ao menos 3 a 60 Caracteres! <br> </small>
         <p class="text-center">
             <button class="button" [disabled]=" form.invalid" (click)="add()"> <i class="far fa-save"></i>  Salvar</button>
+            <button class="add-button animated fadeInUp button" (click)="changeMode('list')" *ngIf="mode=='add'">
+                <i class="fas fa-times"></i>
+                 Cancelar Tarefa
+            </button>
         </p>
         <br>
     </Form>
 </div>
 
 <p class="text-center">
-<button class="add-button animated fadeInUp button" (click)="changeMode('add')" *ngIf="mode=='list'">
+    <button class="add-button animated fadeInUp button" (click)="changeMode('add')" *ngIf="mode=='list'">
     <i class="fas fa-plus-circle"></i>
      Nova Tarefa
-</button>
-<button class="add-button animated fadeInUp button" (click)="changeMode('list')" *ngIf="mode=='add'">
-    <i class="fas fa-times"></i>
-     Cancelar Tarefa
 </button>
 </p>
